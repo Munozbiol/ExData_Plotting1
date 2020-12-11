@@ -7,7 +7,6 @@ subsetdate <- subset(data, subset=(Date == "2007-02-01" | Date == "2007-02-02"))
 
 #First plot 
 png("plot1.png", width=480, height=480)
-histogram <- hist(x=as.numeric(subsetdate$Global_active_power), col = "red", 
-                  xlab = "Global Active Power (Kilowatts)", ylab = "Frequency",
-                  main = "Global Active Power")
+par(mar=c(4, 4, 3, 2))
+histogram <- hist(x=as.numeric(subsetdate$Global_active_power), col = "red", xlab = "Global Active Power (Kilowatts)", ylab = "Frequency", main = "Global Active Power", cex.lab=0.8)
 dev.off()
